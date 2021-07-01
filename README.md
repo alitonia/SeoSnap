@@ -6,7 +6,7 @@ caching PWA's.
 Original version at: https://github.com/experius/SeoSnap
 
 This repo illustrates how you can install and run __SeoSnap__
-at [this commit](https://github.com/experius/SeoSnap/commit/a5281e22ff458eda90fc9f352296a0815f1669a2).
+at [this commit](https://github.com/experius/SeoSnap/tree/6c80a2123f2757ea60e60564d8fd1798eac649d5).
 
 ## Installation
 
@@ -121,7 +121,7 @@ Requirement:
 
 
 * To test if your id is correct:
-    * go to http://localhost:8080/docs/
+    * go to http://localhost/docs/
     * In [__website > read__](https://imgur.com/a/Hgn1wdk), press `Interact`
     * fill version: v1 , id with your page id. Press __Send Request__ to see if you guessed correctly.
 
@@ -131,6 +131,19 @@ Requirement:
     * Other options to crawl with: https://github.com/experius/SeoSnap-Cache-Warmer#commands
 
 
-* Visit __http://localhost:8080/seosnap/website/your_website_id/pages/__ to see
-  the [result](https://imgur.com/a/yd7Z3Em). 
-  
+* Visit __http://localhost/seosnap/website/your_website_id/pages/__ to see the [result](https://imgur.com/a/yd7Z3Em).
+
+## Note
+
+* Most setting can be changed at __.env__ and __docker-compose.yml__ file(s)
+
+* This project uses common port 80 and 3306. If you have conflict, change it in __docker-compose.yml__ file:
+
+    * For built installation: In __docker-compose.yml__, line __169__, change `published: 80` to another port (
+      ex: `published: 8080`), same for line __228__.
+
+    * For code installation:  In __seosnap-dashboard/docker-compose.yml__, line __42__, change `"3306:3306"` to another
+      port (ex: `8081:3306`).
+
+
+* Because all components are already connected with an underlying network, you can remove expose port of mysql.
