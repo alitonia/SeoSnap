@@ -1,9 +1,9 @@
 [submodule "seosnap-dashboard"]
 	path = seosnap-dashboard
-	url = ../SeoSnap-Dashboard.git
+	url = https://github.com/experius/SeoSnap-Dashboard.git
 [submodule "seosnap-cachewarmer"]
 	path = seosnap-cachewarmer
-	url = ../SeoSnap-Cache-Warmer.git
+	url = https://github.com/experius/SeoSnap-Cache-Warmer.git
 [submodule "seosnap-cacheserver"]
 	path = seosnap-cacheserver
-	url = ../SeoSnap-Cache-Server.git
+	url = https://github.com/experius/SeoSnap-Cache-Server.git
