@@ -138,7 +138,7 @@ Requirement:
 ![alt dashboard](assets/doc-read-api.png)
 
 * Crawl your website:
-    * `docker-compose run cachewarmer cache your_website_id`. Might take some time if site is big.
+    * `docker-compose run cachewarmer cache your_website_id`. Might take some time if the site is big.
     * Other options to crawl with: https://github.com/experius/SeoSnap-Cache-Warmer#commands
 
 
