@@ -163,6 +163,7 @@ Requirement:
 
 
 * Because all components are already connected with an underlying network, you can remove expose port of mysql.
+* Ctrl + C doesn't automatically shut down all containers.
 
 # Run on machine
 
