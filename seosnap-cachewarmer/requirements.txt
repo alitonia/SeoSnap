@@ -1,0 +1,4 @@
+scrapy
+coreapi~=2.3.3
+python-dotenv~=0.18
+click~=7.0

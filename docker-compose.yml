@@ -1,40 +1,40 @@
 version: '3.7'
 services:
-  dashboard:
-    build:
-      context: seosnap-dashboard
-    container_name: seosnap_stack_dashboard
-    env_file: ./.env
-    volumes:
-      - ./logs:/code/logs
-    networks:
-      - seosnap
-
-  cachewarmer:
-    build:
-      context: seosnap-cachewarmer
-    container_name: seosnap_stack_cachewarmer
-    env_file: ./.env
-    volumes:
-      - ./logs:/code/logs
-    depends_on:
-      - dashboard
-      - cacheserver
-    networks:
-      - seosnap
-
-  cacheserver:
-    build:
-      context: seosnap-cacheserver
-    container_name: seosnap_stack_cacheserver
-    env_file: ./.env
-    volumes:
-      - ./cache:/app/cache
-      - ./logs:/app/logs
-    depends_on:
-      - rendertron
-    networks:
-      - seosnap
+#  dashboard:
+#    build:
+#      context: seosnap-dashboard
+#    container_name: seosnap_stack_dashboard
+#    env_file: ./.env
+#    volumes:
+#      - ./logs:/code/logs
+#    networks:
+#      - seosnap
+#
+#  cachewarmer:
+#    build:
+#      context: seosnap-cachewarmer
+#    container_name: seosnap_stack_cachewarmer
+#    env_file: ./.env
+#    volumes:
+#      - ./logs:/code/logs
+#    depends_on:
+#      - dashboard
+#      - cacheserver
+#    networks:
+#      - seosnap
+#
+#  cacheserver:
+#    build:
+#      context: seosnap-cacheserver
+#    container_name: seosnap_stack_cacheserver
+#    env_file: ./.env
+#    volumes:
+#      - ./cache:/app/cache
+#      - ./logs:/app/logs
+#    depends_on:
+#      - rendertron
+#    networks:
+#      - seosnap
 
   rendertron:
     container_name: snapstack_rendertron
@@ -44,11 +44,11 @@ services:
     networks:
       - seosnap
 
-  db:
-    container_name: seosnap_stack_db
-    env_file: ./.env
-    networks:
-      - seosnap
+#  db:
+#    container_name: seosnap_stack_db
+#    env_file: ./.env
+#    networks:
+#      - seosnap
 
 networks:
   seosnap:

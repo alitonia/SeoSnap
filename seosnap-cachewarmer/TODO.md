@@ -1,0 +1,2 @@
+* create logs
+* install requirements

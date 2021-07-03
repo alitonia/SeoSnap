@@ -5,7 +5,7 @@ DC_CONFIGS = -f docker-compose.yml -f seosnap-cacheserver/docker-compose.yml -f 
 DC_CONFIGS_DEV = -f docker-compose.yml -f seosnap-cacheserver/docker-compose.dev.yml -f seosnap-cachewarmer/docker-compose.dev.yml -f seosnap-dashboard/docker-compose.dev.yml
 
 
-up: 
+up:
 	docker-compose ${DC_CONFIGS} -f docker-compose.yml up
 
 down:
@@ -27,6 +27,7 @@ install:
 	echo 'Running installation'
 	cp .env.example .env
 	sh seosnap-dashboard/dev/commands/install.sh
+	sh setup.sh
 
 update:
 	git submodule update --init --recursive

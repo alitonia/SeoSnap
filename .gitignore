@@ -143,3 +143,7 @@ dmypy.json
 /release/.env
 /release/.env.example
 /release/*.zip
+
+*.bak
+logs/
+cache/
