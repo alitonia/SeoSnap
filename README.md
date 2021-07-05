@@ -164,6 +164,7 @@ Requirement:
 
 * Because all components are already connected with an underlying network, you can remove expose port of mysql.
 * Ctrl + C doesn't automatically shut down all containers.
+* If you do not directly install mysql on your machine (ex: use [MAMP](https://www.mamp.info/en/windows/)), you need to link it to default sock (ex: `ln -s /Applications/MAMP/tmp/mysql/mysql.sock /tmp/mysql.sock` for MAMP)
 
 # Run on machine
 
